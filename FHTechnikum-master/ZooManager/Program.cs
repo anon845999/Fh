@@ -12,6 +12,7 @@ namespace ZooManager
     internal class Program
     {
         const string PATH = @"..\\..\\..\\ZooManager.txt";
+
         static void Main(string[] args)
         {
             Console.WriteLine("dope");
@@ -87,6 +88,10 @@ namespace ZooManager
                         
                         max = CZooManager.b_of_max_a(manager2.Values, manager1.Values);
                         Console.WriteLine("Von array 2 größter wert, nehme den index und gebe dann array1[index] aus: " + max);
+                        break;
+                    case 10:
+                        SerializeJson(manager1, ref jsonobject);
+                        Console.WriteLine("Manager 1 saved!");
                         break;
 
                     default:
@@ -195,6 +200,7 @@ namespace ZooManager
            Console.Write("7: Durchschn. Groesze\n");
            Console.Write("8: Groesze des Schwersten\n");
            Console.Write("9: Gewicht des Groesten\n");
+           Console.Write("10: Speichern des 1 Objektes\n");
            Console.Write("0: Beenden\n");
            Console.Write("-------------------------\n");
         }
